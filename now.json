@@ -2,6 +2,9 @@
   "version": 2,
   "name": "Picdietjs",
   "alias": ["picdietjs.chenxixian.cn"],
+  "github": {
+    "enabled": true
+  },  
   "builds": [
     { "src": "server.js", "use": "@now/node-server" },
     { "src": "picdiet.js", "use": "@now/static" }
