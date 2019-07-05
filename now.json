@@ -4,7 +4,7 @@
   "builds": [
     { "src": "server.js", "use": "@now/node-server" },
 
-    { "src": "static/index.html", "use": "@now/static" }
+    { "src": "static/*", "use": "@now/static" }
   ],
 
   "routes": [
