@@ -3,7 +3,7 @@
   "name": "Picdietjs",
   "alias": ["picdietjs.chenxixian.cn"],
   "github": {
-    "enabled": false
+    "enabled": true
   },  
   "builds": [
     { "src": "server.js", "use": "@now/node-server" },
