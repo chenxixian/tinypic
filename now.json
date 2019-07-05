@@ -1,29 +1,35 @@
 {
-  "version": 2,
-  "name": "Picdietjs",
-  "alias": ["picdietjs.chenxixian.cn"],
-  "github": {
-    "enabled": true
-  },  
-  "builds": [
-    { "src": "server.js", "use": "@now/node-server" },
-    { "src": "picdiet.js", "use": "@now/static" }
-    { "src": "static/*", "use": "@now/static" }
-  ],
-
-  "routes": [
-    {
-      "headers": {
-        "Access-Control-Allow-Origin": "*",
-
-        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-
-        "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
-      },
-
-      "src": "/.*",
-
-      "dest": "/server.js"
-    }
-  ]
+    "version": 2,
+    "name": "Picdietjs",
+    "alias": [
+        "picdietjs.chenxixian.cn"
+    ],
+    "github": {
+        "enabled": true
+    },
+    "builds": [
+        {
+            "src": "server.js",
+            "use": "@now/node-server"
+        },
+        {
+            "src": "picdiet.js",
+            "use": "@now/static"
+        },
+        {
+            "src": "static/*",
+            "use": "@now/static"
+        }
+    ],
+    "routes": [
+        {
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+                "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
+            },
+            "src": "/.*",
+            "dest": "/server.js"
+        }
+    ]
 }
