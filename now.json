@@ -4,7 +4,7 @@
   "alias": ["picdietjs.chenxixian.cn"],
   "builds": [
     { "src": "server.js", "use": "@now/node-server" },
-
+    { "src": "picdiet.js", "use": "@now/static" }
     { "src": "static/*", "use": "@now/static" }
   ],
 
