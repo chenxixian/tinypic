@@ -1,26 +1,17 @@
-var express = require("express");
-var upload = require("multer")({ dest: "." });
-var path = require("path");
-var fs = require("fs");
+const express = require("express");
+const upload = require("multer")({ dest: "." });
+const path = require("path");
+const fs = require("fs");
 //const pako = require('pako');
 //const pic = require('./static/picdiet.js');
-var port = 8080;
-
-//var http = require("http");
-//create a server object:
-// http
-//   .createServer(function(req, res) {
-//     res.write("Hello World!"); //write a response to the client
-//     res.end(); //end the response
-//   })
-//   .listen(8080); //the server object listens on port 8080
+const port = 3000;
+//GLOBAL.document = new JSDOM(html).window.document;
 
 let app = express();
-let rootstr = path.join(__dirname, "static");
-let str = express.static(rootstr);
 
 app.set("port", port);
-app.use(str);
+app.use(express.static(path.join(__dirname, "static")));
+
 app.get("/index.html", (req, res) => {
   res.redirect("index.html");
 });
@@ -42,6 +33,7 @@ app.post("/upload", upload.single("test-upload"), (req, res) => {
     res.json({ ok: false });
     return;
   }
+
   // 输出文件信息
   console.log("====================================================");
   console.log("fieldname: " + req.file.fieldname);
@@ -64,4 +56,8 @@ app.post("/upload", upload.single("test-upload"), (req, res) => {
       res.json({ ok: true });
     }
   });
+});
+
+app.listen(port, () => {
+  console.log("[Server] localhost:" + port);
 });
