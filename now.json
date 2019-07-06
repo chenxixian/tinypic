@@ -1,8 +1,8 @@
 {
     "version": 2,
-    "name": "Picdietjs",
+    "name": "tinypic",
     "alias": [
-        "picdietjs.chenxixian.cn"
+        "tinypic.chenxixian.cn"
     ],
     "github": {
         "enabled": true

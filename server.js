@@ -10,7 +10,7 @@ const port = 3000;
 let app = express();
 
 app.set("port", port);
-app.use(express.static(path.join(__dirname, "static")));
+app.use(express.static(path.join(__dirname, ".")));
 
 app.get("/index.html", (req, res) => {
   res.redirect("index.html");
