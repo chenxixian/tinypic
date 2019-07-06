@@ -59,5 +59,5 @@ app.post("/upload", upload.single("test-upload"), (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log("[Server] localhost:" + port);
+  console.log("[Server] http://localhost:" + port);
 });
